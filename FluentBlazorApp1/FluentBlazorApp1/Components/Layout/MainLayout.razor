@@ -1,11 +1,13 @@
 ﻿@using FluentBlazorApp1.Client.Layout
+@using Microsoft.FluentUI.AspNetCore.Components.DesignTokens
 @inherits LayoutComponentBase
+@inject FillColor FillColor
+@inject BaseLayerLuminance BaseLayerLuminance
+@inject BodyFont BodyFont
+@inject TypeRampBaseFontSize TypeRampBaseFontSize
+@inject Direction Direction
+@inject AccentBaseColor AccentBaseColor
 
-@* <FluentDesignTheme @bind-Mode="@Mode"
-                   @bind-OfficeColor="@OfficeColor"
-                   OnLoaded="@OnLoaded"
-                   OnLuminanceChanged="@OnLuminanceChanged"
-                   StorageName="theme" /> *@
 <FluentLayout>
     <FluentHeader>
         BlazorApp1
@@ -35,24 +37,18 @@
 </div>
 
 @code {
-    public DesignThemeModes Mode { get; set; }
-    public OfficeColor? OfficeColor { get; set; }
 
-    protected override void OnInitialized()
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        Console.WriteLine(NavigationManager.Uri.ToString());
-
+        if (firstRender)
+        {
+            await AccentBaseColor.WithDefault("#000000".ToSwatch());
+            await FillColor.WithDefault("#000000".ToSwatch());
+            await BaseLayerLuminance.WithDefault((float)0.2);
+            await TypeRampBaseFontSize.WithDefault("20");
+            await BodyFont.WithDefault("Sitka Display");
+            await Direction.WithDefault("RTL");
+            StateHasChanged();
+        }
     }
-
-    void OnLoaded(LoadedEventArgs e)
-    {
-        Console.WriteLine($"Loaded: {(e.Mode == DesignThemeModes.System ? "System" : "")} {(e.IsDark ? "Dark" : "Light")}");
-    }
-
-    void OnLuminanceChanged(LuminanceChangedEventArgs e)
-    {
-
-        Console.WriteLine($"Changed: {(e.Mode == DesignThemeModes.System ? "System" : "")} {(e.IsDark ? "Dark" : "Light")}");
-    }
-
 }
