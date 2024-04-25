@@ -22,7 +22,8 @@ body {
 .body-content {
     align-self: stretch;
     height: unset !important;
-    display: flex;
+    overflow: visible !important;
+    /*display: flex;*/
 }
 
 .authentication-wrapper {

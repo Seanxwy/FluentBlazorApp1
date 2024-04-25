@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34804.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentBlazorApp1", "FluentBlazorApp1\FluentBlazorApp1\FluentBlazorApp1.csproj", "{FAF9D8AE-904E-4C21-A345-A735733D3CA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentBlazorApp1", "FluentBlazorApp1\FluentBlazorApp1\FluentBlazorApp1.csproj", "{FAF9D8AE-904E-4C21-A345-A735733D3CA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentBlazorApp1.Client", "FluentBlazorApp1\FluentBlazorApp1.Client\FluentBlazorApp1.Client.csproj", "{96715AE2-90DA-429F-9BE1-D92CA6835314}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentBlazorApp1.Client", "FluentBlazorApp1\FluentBlazorApp1.Client\FluentBlazorApp1.Client.csproj", "{96715AE2-90DA-429F-9BE1-D92CA6835314}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
