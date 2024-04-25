@@ -20,10 +20,7 @@ body {
 }
 
 .body-content {
-    align-self: stretch;
-    height: unset !important;
     overflow: visible !important;
-    /*display: flex;*/
 }
 
 .authentication-wrapper {
