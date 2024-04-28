@@ -9,7 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\FluentBlazorApp1.Client\FluentBlazorApp1.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.2" />
-	  <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.6.1" />
+	  <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.7.1" />
 	  <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components.Icons" Version="4.6.1" />
   </ItemGroup>
 
